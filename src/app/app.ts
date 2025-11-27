@@ -17,7 +17,7 @@ export class App {
     title: 'Obra na avenida principal altera trânsito e exige atenção de motoristas',
     excerpt:
       'Intervenção emergencial muda temporariamente o fluxo de veículos e cria rotas alternativas para quem passa pelo centro da cidade.',
-    image: 'assets/images/viatura.png',
+    image: 'assets/images/viatura3.png',
     badge: 'Última hora',
     category: 'Cidade',
     author: 'Redação Camacã News',
