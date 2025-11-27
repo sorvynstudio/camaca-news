@@ -1,0 +1,11 @@
+<div class="news-list">
+  <app-news-card
+    *ngFor="let item of items; trackBy: trackItem"
+    [title]="item.title"
+    [excerpt]="item.excerpt"
+    [image]="item.image"
+    [link]="item.link"
+    [category]="item.category || ''"
+    [dateLabel]="item.dateLabel || ''"
+  />
+</div>
