@@ -1,0 +1,24 @@
+<article class="featured">
+  <figure class="featured__media">
+    <img class="featured__image" [src]="image" [alt]="title" loading="lazy" />
+    <span class="featured__badge" *ngIf="badge">{{ badge }}</span>
+  </figure>
+
+  <div class="featured__content">
+    <div class="featured__meta">
+      <span class="featured__category" *ngIf="category">{{ category }}</span>
+      <span class="featured__dot" *ngIf="category && dateLabel">•</span>
+      <time *ngIf="dateLabel" [attr.datetime]="dateTime || null">{{ dateLabel }}</time>
+    </div>
+
+    <h1 class="featured__title">{{ title }}</h1>
+    <p class="featured__excerpt">{{ excerpt }}</p>
+
+    <div class="featured__footer">
+      <div class="featured__author" *ngIf="author">
+        <span>Por {{ author }}</span>
+      </div>
+      <a class="featured__cta" [href]="link">Ler notícia completa</a>
+    </div>
+  </div>
+</article>
