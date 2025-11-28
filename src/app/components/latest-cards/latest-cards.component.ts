@@ -4,13 +4,13 @@ import { RouterLink } from '@angular/router';
 import { type NewsArticle } from '../../services/news.service';
 
 @Component({
-  selector: 'app-news-list',
+  selector: 'app-latest-cards',
   standalone: true,
   imports: [NgFor, NgIf, RouterLink],
-  templateUrl: './news-list.component.html',
-  styleUrl: './news-list.component.css'
+  templateUrl: './latest-cards.component.html',
+  styleUrl: './latest-cards.component.css',
 })
-export class NewsListComponent {
+export class LatestCardsComponent {
   @Input({ required: true }) items: NewsArticle[] = [];
 
   protected trackItem = (_: number, item: NewsArticle) => item.slug;

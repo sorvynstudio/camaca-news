@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global base styles */
+body {
+  margin: 0;
+  background: #f9f9f9;
+  color: #e69f10;
+  font-family: glbOpenSans, "Open Sans", Arial, Inter, -apple-system, "system-ui", Roboto,
+    "Helvetica Neue", Helvetica, Noto, Ubuntu, "Segoe UI", sans-serif;
+}

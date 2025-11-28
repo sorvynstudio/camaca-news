@@ -17,5 +17,5 @@ export class FeaturedArticleComponent {
   @Input() author = '';
   @Input() dateLabel = '';
   @Input() dateTime = '';
-  @Input() link = '#';
+  @Input() slug = '';
 }

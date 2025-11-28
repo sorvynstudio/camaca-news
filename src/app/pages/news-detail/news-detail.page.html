@@ -1,0 +1,31 @@
+<ng-container *ngIf="article; else notFound">
+  <article class="article">
+    <header class="article__header">
+      <div class="article__meta">
+        <span class="article__category">{{ article.category }}</span>
+        <span class="article__dot">•</span>
+        <time [attr.datetime]="article.dateTime || null">{{ article.dateLabel }}</time>
+      </div>
+      <h1 class="article__title">{{ article.title }}</h1>
+      <p class="article__excerpt">{{ article.excerpt }}</p>
+    </header>
+
+    <figure class="article__figure">
+      <img class="article__image" [src]="article.image" [alt]="article.title" loading="lazy" />
+    </figure>
+
+    <section class="article__content">
+      <p *ngFor="let paragraph of article.content">{{ paragraph }}</p>
+    </section>
+
+    <a class="article__back" routerLink="/">← Voltar para a home</a>
+  </article>
+</ng-container>
+
+<ng-template #notFound>
+  <section class="article article--empty">
+    <h2>Notícia não encontrada</h2>
+    <p>Essa matéria não existe ou foi removida.</p>
+    <a class="article__back" routerLink="/">Voltar para a home</a>
+  </section>
+</ng-template>
