@@ -1,31 +1,7 @@
 <div class="page">
   <app-header />
-
   <main class="layout">
-    <section class="layout__featured">
-      <app-featured-article
-        [title]="featured.title"
-        [excerpt]="featured.excerpt"
-        [image]="featured.image"
-        [badge]="featured.badge"
-        [category]="featured.category"
-        [author]="featured.author"
-        [dateLabel]="featured.dateLabel"
-        [dateTime]="featured.dateTime"
-        [link]="featured.link"
-      />
-    </section>
-
-    <section class="layout__latest" aria-labelledby="latest-title">
-      <div class="section-header">
-        <h2 id="latest-title">Últimas notícias</h2>
-        <a class="section-header__link" href="#">Ver todas</a>
-      </div>
-      <app-news-list [items]="latestNews" />
-    </section>
+    <router-outlet />
   </main>
-
   <app-footer />
 </div>
-
-<router-outlet />

@@ -1,0 +1,35 @@
+<div class="layout__grid">
+  <div class="layout__main">
+    <section class="layout__featured">
+      <app-featured-article
+        [title]="featured.title"
+        [excerpt]="featured.excerpt"
+        [image]="featured.image"
+        [badge]="featured.badge || ''"
+        [category]="featured.category"
+        [author]="featured.author || ''"
+        [dateLabel]="featured.dateLabel"
+        [dateTime]="featured.dateTime || ''"
+        [slug]="featured.slug"
+      />
+    </section>
+
+    <section class="layout__latest" aria-labelledby="latest-title">
+      <app-latest-cards [items]="latestNews" />
+    </section>
+
+    <section class="layout__stack" aria-labelledby="stack-title">
+      <div class="section-header">
+        <h2 id="stack-title">Mais notícias</h2>
+      </div>
+      <app-news-list [items]="stackedNews" />
+    </section>
+  </div>
+
+  <aside class="layout__aside" aria-labelledby="aside-title">
+    <div class="section-header">
+      <h3 id="aside-title">Destaques rápidos</h3>
+    </div>
+    <app-news-list [items]="asideNews" />
+  </aside>
+</div>

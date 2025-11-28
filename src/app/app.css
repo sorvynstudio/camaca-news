@@ -1,8 +1,9 @@
 :host {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #0f172a;
-  background: #0a0f1c;
+  font-family: glbOpenSans, "Open Sans", Arial, Inter, -apple-system, "system-ui", Roboto,
+    "Helvetica Neue", Helvetica, Noto, Ubuntu, "Segoe UI", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #e69f10;
+  background: #f9f9f9;
   display: block;
   min-height: 100vh;
 }
@@ -19,7 +20,7 @@ a {
 }
 
 .page {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 1.25rem;
   display: flex;
@@ -27,7 +28,14 @@ a {
   gap: 1.5rem;
 }
 
-.layout {
+.layout__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) 340px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.layout__main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -38,10 +46,27 @@ a {
 }
 
 .layout__latest {
-  background: #0b1220;
+  background: transparent;
   border-radius: 18px;
   padding: 1.2rem;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+}
+
+.layout__stack {
+  background: transparent;
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: none;
+}
+
+.stack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.layout__aside {
+  padding-left: 2rem;
 }
 
 .section-header {
@@ -49,7 +74,7 @@ a {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.75rem;
-  color: #e2e8f0;
+  color: #de9210;
 }
 
 .section-header__link {
@@ -60,5 +85,9 @@ a {
 @media (max-width: 768px) {
   .page {
     padding: 1rem;
+  }
+
+  .layout__grid {
+    grid-template-columns: 1fr;
   }
 }

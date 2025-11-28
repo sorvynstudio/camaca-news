@@ -3,11 +3,30 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.25rem;
-  background: #0f172a;
+  background: #e69f10;
   color: #e2e8f0;
-  border-radius: 14px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  z-index: 100;
+  font-family: glbOpenSans, "Open Sans", Arial, Inter, -apple-system, "system-ui", Roboto,
+    "Helvetica Neue", Helvetica, Noto, Ubuntu, "Segoe UI", sans-serif;
+}
+
+.header__inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-sizing: border-box;
 }
 
 .brand {
@@ -62,7 +81,7 @@
 }
 
 @media (max-width: 768px) {
-  .header {
+  .header__inner {
     flex-direction: column;
     align-items: flex-start;
   }
