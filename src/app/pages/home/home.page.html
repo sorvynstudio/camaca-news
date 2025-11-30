@@ -27,9 +27,11 @@
   </div>
 
   <aside class="layout__aside" aria-labelledby="aside-title">
-    <div class="section-header">
+    <div class="aside-header">
       <h3 id="aside-title">Destaques rápidos</h3>
+      <app-news-list [items]="asideNews"/>
     </div>
-    <app-news-list [items]="asideNews" />
+
   </aside>
 </div>
+

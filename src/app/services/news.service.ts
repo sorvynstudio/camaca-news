@@ -109,8 +109,7 @@ export class NewsService {
       sections: ['aside'],
       content: [
         'A secretaria de saúde montou pontos de vacinação em escolas e praças para ampliar a cobertura.',
-        'Filas tiveram bom fluxo após reforço de equipes e distribuição de senhas digitais.',
-        'A campanha segue durante a semana para atingir grupos prioritários e evitar faltas por ausência.',
+  
       ],
     },
     {
@@ -124,8 +123,7 @@ export class NewsService {
       sections: ['aside'],
       content: [
         'Empresas do comércio e do setor de serviços abriram vagas imediatas e banco de talentos.',
-        'A feira conta com oficinas de currículo, entrevistas simuladas e atendimento de orientação profissional.',
-        'Organização recomenda levar documentos e chegar cedo para evitar filas maiores no último dia.',
+
       ],
     },
     {

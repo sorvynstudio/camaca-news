@@ -30,7 +30,7 @@ a {
 
 .layout__grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) 340px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: 1.25rem;
   align-items: start;
 }
@@ -76,6 +76,15 @@ a {
   margin-bottom: 0.75rem;
   color: #de9210;
 }
+
+.aside-header {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: #de9210;
+}
+
 
 .section-header__link {
   font-size: 0.95rem;
