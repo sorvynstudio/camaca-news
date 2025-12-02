@@ -8,6 +8,28 @@
       </div>
       <h1 class="article__title">{{ article.title }}</h1>
       <p class="article__excerpt">{{ article.excerpt }}</p>
+      <div class="article__byline" *ngIf="article.author">
+        <span class="article__by">Por <strong>{{ article.author }}</strong></span>
+      </div>
+      <div class="article__timestamp">
+        <time [attr.datetime]="article.dateTime || null">{{ article.dateLabel }}</time>
+        <span class="article__dot">•</span>
+        <span class="article__update">Atualizado há pouco</span>
+      </div>
+      <div class="article__actions" aria-label="Compartilhar">
+        <button type="button" class="article__action">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          <span>Facebook</span>
+        </button>
+        <button type="button" class="article__action">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>WhatsApp</span>
+        </button>
+        <button type="button" class="article__action">
+          <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+          <span>Compartilhar</span>
+        </button>
+      </div>
     </header>
 
     <figure class="article__figure">
