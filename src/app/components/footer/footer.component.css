@@ -3,21 +3,15 @@
   margin-top: 1.5rem;
   padding: 1.75rem 1.25rem 1.25rem;
   border-radius: 18px;
-  background: radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.12), transparent 45%),
-    radial-gradient(circle at 80% 10%, rgba(236, 72, 153, 0.12), transparent 45%),
-    #0b1220;
-  color: #e2e8f0;
+  background: #f9f9f9;
+  color: #0f172a;
   overflow: hidden;
-  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.16);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .footer__glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.2));
-  opacity: 0.4;
-  filter: blur(38px);
+  display: none;
 }
 
 .footer__brand {
@@ -32,13 +26,18 @@
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  background: transparent;
   display: grid;
   place-items: center;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #0f172a;
+  padding: 4px;
   z-index: 1;
+}
+
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .footer__title {
@@ -50,7 +49,7 @@
 .footer__subtitle {
   margin: 0;
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: inherit;
 }
 
 .footer__grid {
@@ -70,25 +69,12 @@
   gap: 0.5rem;
 }
 
-.footer__col--cta {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 0.75rem 0.85rem;
-  max-width: none;
-  margin-left: auto;
-  align-self: flex-start;
-  flex-shrink: 0;
-  font-size: 0.85rem;
-  line-height: 1.3;
-}
-
 .footer__heading {
   margin: 0;
   font-size: 0.55rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #cbd5e1;
+  color: inherit;
 }
 
 .footer__links {
@@ -99,7 +85,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
-  color: #e2e8f0;
+  color: #0f172a;
 }
 
 .footer__links a {
@@ -111,15 +97,15 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  background: rgba(255, 255, 255, 0.2);
   font-size: 1.1rem;
   transition: color 0.2s ease;
 }
 
 .footer__links a:hover {
-  border-color: rgba(165, 180, 252, 0.5);
-  background: rgba(165, 180, 252, 0.06);
+  border-color: rgba(15, 23, 42, 0.35);
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .footer__links .footer__icon {
@@ -129,18 +115,18 @@
 }
 
 .footer__links a[aria-label="YouTube"] {
-  color: #ff4141;
+  color: #d7263d;
 }
 
 .footer__links a[aria-label="YouTube"]:hover {
-  color: #ff6b6b;
-  border-color: rgba(255, 107, 107, 0.6);
-  background: rgba(255, 107, 107, 0.08);
+  color: #b91c32;
+  border-color: rgba(185, 28, 50, 0.45);
+  background: rgba(255, 255, 255, 0.32);
 }
 
 .footer__text {
   margin: 0;
-  color: #cbd5e1;
+  color: inherit;
   line-height: 1.5;
 }
 
@@ -149,8 +135,8 @@
   padding: 0.65rem 1rem;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  color: #0b1220;
+  background: #e2e8f0;
+  color: #0f172a;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
@@ -159,11 +145,12 @@
   text-align: center;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .footer__button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.25);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.16);
 }
 
 .footer__bottom {
@@ -174,7 +161,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding-top: 1rem;
-  color: #94a3b8;
+  color: rgba(15, 23, 42, 0.85);
   font-size: 0.9rem;
 }
 

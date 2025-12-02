@@ -1,8 +1,10 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap'); */
+
 /* Global base styles */
 body {
   margin: 0;
   background: #f9f9f9;
   color: #e69f10;
-  font-family: glbOpenSans, "Open Sans", Arial, Inter, -apple-system, "system-ui", Roboto,
-    "Helvetica Neue", Helvetica, Noto, Ubuntu, "Segoe UI", sans-serif;
+  font-family: 'Open Sans', glbOpenSans, Arial, Inter, -apple-system, 'system-ui', Roboto,
+    'Helvetica Neue', Helvetica, Noto, Ubuntu, 'Segoe UI', sans-serif;
 }

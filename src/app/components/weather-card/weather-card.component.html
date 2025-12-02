@@ -1,0 +1,18 @@
+<article class="weather-card">
+  <header class="weather-card__header">
+    <p class="weather-card__city">{{ city }}</p>
+    <p class="weather-card__condition">{{ condition }}</p>
+    <p class="weather-card__temp">
+      <strong>{{ temperature }}°</strong>
+      <span class="weather-card__range">{{ minTemperature }}° / {{ maxTemperature }}°</span>
+    </p>
+  </header>
+
+  <ul class="weather-card__list">
+    <li *ngFor="let item of forecast">
+      <span class="weather-card__icon">{{ item.icon }}</span>
+      <span class="weather-card__label">{{ item.label }}</span>
+      <span class="weather-card__value">{{ item.temp }}</span>
+    </li>
+  </ul>
+</article>

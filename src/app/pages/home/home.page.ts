@@ -4,11 +4,12 @@ import { FeaturedArticleComponent } from '../../components/featured-article/feat
 import { NewsListComponent } from '../../components/news-list/news-list.component';
 import { LatestCardsComponent } from '../../components/latest-cards/latest-cards.component';
 import { NewsService, type NewsArticle } from '../../services/news.service';
+import { WeatherCardComponent } from '../../components/weather-card/weather-card.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, FeaturedArticleComponent, NewsListComponent, LatestCardsComponent],
+  imports: [CommonModule, FeaturedArticleComponent, NewsListComponent, LatestCardsComponent, WeatherCardComponent],
   templateUrl: './home.page.html',
 })
 export class HomePageComponent {
