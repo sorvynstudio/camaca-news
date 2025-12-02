@@ -27,7 +27,9 @@ export class NewsDetailPageComponent {
   constructor() {
     this.route.paramMap.subscribe((params) => {
       const slug = params.get('slug') ?? '';
+      console.log('Loading news detail slug:', slug);
       this.article = this.newsDetailService.getBySlug(slug);
+      console.log('Fetched article', this.article);
     });
   }
 }

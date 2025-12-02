@@ -14,7 +14,6 @@ export type NewsArticle = {
   badge?: string;
   content: string[];
   facts?: string[];
-  fullContent?: string[];
   sections?: Array<'featured' | 'latest' | 'aside' | 'stack'>;
   featureBlock?: {
     image: string;
@@ -60,19 +59,7 @@ O cronograma prevê conclusão em 15 dias, com acompanhamento diário de equipes
         'Afeta três linhas de ônibus',
         'Investimento: R$ 1,2 milhão',
       ],
-      fullContent: `
-A prefeitura iniciou uma obra emergencial na avenida principal para corrigir pontos críticos de drenagem.
 
-Durante o período de intervenção, parte das faixas ficará interditada, com desvios sinalizados para motoristas e linhas de ônibus.
-
-A recomendação é sair mais cedo e seguir as rotas alternativas, principalmente nos horários de pico.
-
-Engenheiros da secretaria afirmam que a intervenção resolve um problema antigo de acúmulo de água que já provocou danos ao asfalto em anos anteriores.
-
-Comerciantes da região relataram queda no movimento durante as primeiras horas da obra, mas esperam recuperação após a conclusão da fase mais pesada.
-
-O cronograma prevê conclusão em 15 dias, com acompanhamento diário de equipes de fiscalização e atualização das rotas de ônibus em tempo real pelos aplicativos locais.
-`.trim().split('\n\n'),
 },
     {
       slug: 'evento-cultural',
@@ -93,14 +80,7 @@ O evento também contou com feira gastronômica e ações de incentivo à leitur
 Organizadores avaliaram o público como acima do esperado, reforçando planos para próximas edições.
 `.trim().split('\n\n'),
       sections: ['latest'],
-      fullContent: `
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
 
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-including versions of Lorem Ipsum.
-`.trim().split('\n\n'),
       featureBlock: {
         image: 'assets/images/logo_camacan.png',
         title: 'Bastidores e atrações',
@@ -126,13 +106,7 @@ Segundo a associação comercial, a movimentação superou a do ano passado, imp
 
 Especialistas alertam para atenção aos direitos do consumidor e cuidado com golpes online.
 `.trim().split('\n\n'),
-      fullContent: `
-Comerciantes locais apostaram em descontos progressivos e prazos estendidos para pagamento.
 
-Segundo a associação comercial, a movimentação superou a do ano passado, impulsionada por divulgação digital.
-
-Especialistas alertam para atenção aos direitos do consumidor e cuidado com golpes online.
-`.trim().split('\n\n'),
 },
     {
       slug: 'operacao-policial',
@@ -152,13 +126,7 @@ Materiais ilícitos foram apreendidos e suspeitos conduzidos para depoimento na 
 A operação faz parte de um calendário de ações coordenadas que seguirá até o fim do ano.
 `.trim().split('\n\n'),
 sections: ['latest'],
-      fullContent: `
-Equipes da polícia civil e militar cumpriram mandados de busca em diferentes pontos do bairro.
 
-Materiais ilícitos foram apreendidos e suspeitos conduzidos para depoimento na delegacia.
-
-A operação faz parte de um calendário de ações coordenadas que seguirá até o fim do ano.
-`.trim().split('\n\n'),
     },
     {
       slug: 'plantao-chuva',
@@ -183,17 +151,7 @@ Meteorologistas apontam que os volumes previstos podem superar a média históri
 
 Equipes de limpeza intensificaram a retirada de lixo de bueiros para evitar entupimentos que ampliam pontos de alagamento.
 `.trim().split('\n\n'),
-      fullContent: `
-A defesa civil ativou plano preventivo para monitorar áreas de risco diante da previsão de chuva intensa.
 
-Abrigos temporários foram preparados e equipes orientam moradores sobre rotas seguras.
-
-O órgão recomenda evitar deslocamentos em pontos de alagamento e acionar o serviço em caso de emergência.
-
-Meteorologistas apontam que os volumes previstos podem superar a média histórica do mês, exigindo atenção redobrada.
-
-Equipes de limpeza intensificaram a retirada de lixo de bueiros para evitar entupimentos que ampliam pontos de alagamento.
-`.trim().split('\n\n'),
 },
     {
       slug: 'saude-vacinacao',
@@ -213,13 +171,7 @@ Profissionais reforçam a necessidade da dose para reduzir casos graves antes do
 
 A pasta informou que novas remessas serão distribuídas ainda nesta semana para evitar falta de doses.
 `.trim().split('\n\n'),
-      fullContent: `
-A secretaria de saúde montou pontos de vacinação em escolas e praças para ampliar a cobertura.
 
-Profissionais reforçam a necessidade da dose para reduzir casos graves antes do pico de doenças respiratórias.
-
-A pasta informou que novas remessas serão distribuídas ainda nesta semana para evitar falta de doses.
-`.trim().split('\n\n'),
 },
     {
       slug: 'emprego-feira',
@@ -239,13 +191,7 @@ As entrevistas acontecem ao longo do dia, e candidatos são orientados a levar c
 
 A organização disponibilizou guichês de orientação para quem precisa de ajuda na elaboração do currículo.
 `.trim().split('\n\n'),
-      fullContent: `
-Empresas do comércio e do setor de serviços abriram vagas imediatas e banco de talentos.
 
-As entrevistas acontecem ao longo do dia, e candidatos são orientados a levar currículo impresso e documento de identidade.
-
-A organização disponibilizou guichês de orientação para quem precisa de ajuda na elaboração do currículo.
-`.trim().split('\n\n'),
 },
     {
       slug: 'prefeitura-reforma-pracas',
@@ -261,11 +207,7 @@ As obras serão executadas em fases para minimizar impacto no entorno, com previ
 
 Novos brinquedos infantis, pista de caminhada e academia ao ar livre fazem parte do projeto.
 `.trim().split('\n\n'),
-      fullContent: `
-As obras serão executadas em fases para minimizar impacto no entorno, com previsão de entrega em 90 dias.
 
-Novos brinquedos infantis, pista de caminhada e academia ao ar livre fazem parte do projeto.
-`.trim().split('\n\n'),
 },
     {
       slug: 'esporte-corrida-rua',
@@ -281,11 +223,7 @@ A organização recomenda chegar com antecedência para retirada de kits e along
 
 Haverá pontos de hidratação a cada 2km e equipe médica de prontidão.
 `.trim().split('\n\n'),
-      fullContent: `
-A organização recomenda chegar com antecedência para retirada de kits e alongamento guiado.
 
-Haverá pontos de hidratação a cada 2km e equipe médica de prontidão.
-`.trim().split('\n\n'),
 },
     {
       slug: 'educacao-oficinas',
@@ -301,11 +239,7 @@ As oficinas integram o programa municipal de inclusão digital e seguem até o f
 
 Alunos recebem kit básico de eletrônica para exercícios práticos em sala.
 `.trim().split('\n\n'),
-      fullContent: `
-As oficinas integram o programa municipal de inclusão digital e seguem até o fim do mês.
 
-Alunos recebem kit básico de eletrônica para exercícios práticos em sala.
-`.trim().split('\n\n'),
 },
     {
       slug: 'meio-ambiente-mudas',
@@ -321,11 +255,7 @@ Espécies nativas foram priorizadas para ampliar a cobertura verde e reduzir ilh
 
 Moradores receberam orientação de manejo e cuidado inicial das mudas.
 `.trim().split('\n\n'),
-      fullContent: `
-Espécies nativas foram priorizadas para ampliar a cobertura verde e reduzir ilhas de calor.
 
-Moradores receberam orientação de manejo e cuidado inicial das mudas.
-`.trim().split('\n\n'),
 },
     {
       slug: 'seguranca-monitoramento',
@@ -341,13 +271,7 @@ A expansão integra o plano municipal de segurança urbana e deve cobrir 18 pont
 
 Imagens serão compartilhadas com as forças policiais e armazenadas conforme legislação vigente.
 `.trim().split('\n\n'),
-      fullContent: `
-A expansão integra o plano municipal de segurança urbana e deve cobrir 18 pontos estratégicos, incluindo terminais de ônibus e áreas com maior incidência de ocorrências.
 
-Imagens serão compartilhadas com as forças policiais e armazenadas conforme legislação vigente.
-
-O município afirma que os novos equipamentos contam com reconhecimento de placas e suporte 24h.
-`.trim().split('\n\n'),
 },
   ];
 

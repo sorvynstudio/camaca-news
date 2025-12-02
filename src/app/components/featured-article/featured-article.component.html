@@ -1,8 +1,10 @@
 <article class="featured">
-  <figure class="featured__media">
-    <img class="featured__image" [src]="image" [alt]="title" loading="lazy" />
-    <span class="featured__badge" *ngIf="badge">{{ badge }}</span>
-  </figure>
+  <a class="featured__media-link" [routerLink]="['/noticias', slug]">
+    <figure class="featured__media">
+      <img class="featured__image" [src]="image" [alt]="title" loading="lazy" />
+      <span class="featured__badge" *ngIf="badge">{{ badge }}</span>
+    </figure>
+  </a>
 
   <div class="featured__content">
     <div class="featured__meta">
@@ -11,7 +13,9 @@
       <time *ngIf="dateLabel" [attr.datetime]="dateTime || null">{{ dateLabel }}</time>
     </div>
 
-    <h1 class="featured__title">{{ title }}</h1>
+    <h1 class="featured__title">
+      <a [routerLink]="['/noticias', slug]">{{ title }}</a>
+    </h1>
     <p class="featured__excerpt">{{ excerpt }}</p>
 
     <div class="featured__footer">

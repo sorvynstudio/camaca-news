@@ -17,6 +17,10 @@
   border-radius: 14px;
 }
 
+.featured__media-link {
+  display: block;
+}
+
 .featured__image {
   width: 100%;
   height: 100%;
@@ -61,6 +65,15 @@
   margin: 0;
   font-size: 2rem;
   line-height: 1.1;
+}
+
+.featured__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured__title a:hover {
+  text-decoration: underline;
 }
 
 .featured__excerpt {

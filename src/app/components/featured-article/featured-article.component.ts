@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-featured-article',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, RouterLink],
   templateUrl: './featured-article.component.html',
   styleUrl: './featured-article.component.css'
 })
