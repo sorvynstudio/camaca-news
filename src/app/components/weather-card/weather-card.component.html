@@ -1,18 +1,25 @@
-<article class="weather-card">
-  <header class="weather-card__header">
-    <p class="weather-card__city">{{ city }}</p>
-    <p class="weather-card__condition">{{ condition }}</p>
-    <p class="weather-card__temp">
-      <strong>{{ temperature }}°</strong>
-      <span class="weather-card__range">{{ minTemperature }}° / {{ maxTemperature }}°</span>
-    </p>
-  </header>
+<ng-container *ngIf="weather$ | async as weather; else waiting">
+  <article class="weather-card" [style.--weather-card-bg]="themeFor(weather.condition)">
+    <header class="weather-card__header">
+      <p class="weather-card__city">{{ weather.city }}</p>
+      <p class="weather-card__condition">{{ weather.condition }}</p>
+      <p class="weather-card__temp">
+        <strong>{{ weather.temperature }}°</strong>
+        <span class="weather-card__range">{{ weather.minTemperature }}° / {{ weather.maxTemperature }}°</span>
+      </p>
+    </header>
 
   <ul class="weather-card__list">
-    <li *ngFor="let item of forecast">
+    <li *ngFor="let item of weather.forecast">
       <span class="weather-card__icon">{{ item.icon }}</span>
       <span class="weather-card__label">{{ item.label }}</span>
       <span class="weather-card__value">{{ item.temp }}</span>
     </li>
   </ul>
-</article>
+  </article>
+</ng-container>
+<ng-template #waiting>
+  <article class="weather-card weather-card--waiting">
+    <p>Precisamos da sua localização para mostrar a previsão.</p>
+  </article>
+</ng-template>
