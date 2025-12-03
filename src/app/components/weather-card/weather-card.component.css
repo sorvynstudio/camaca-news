@@ -1,7 +1,7 @@
 .weather-card {
   padding: 1rem;
   border-radius: 16px;
-  background: linear-gradient(160deg, #1e3a8a, #2563eb);
+  background: var(--weather-card-bg, linear-gradient(160deg, #1e3a8a, #2563eb));
   color: #fff;
   display: flex;
   flex-direction: column;
